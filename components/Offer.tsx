@@ -11,25 +11,25 @@ const alwaysIncluded = [
 
 const sizeRanges = [
   {
-    label: "Consultorio o local pequeño",
+    label: "Pequeño negocio o local",
     range: "1 – 15 puntos",
     example:
-      "Recepción, 2-3 consultorios, cámaras en accesos. Internet, telefonía básica.",
+      "Una sola planta, 3-4 áreas, cámaras en accesos. Internet interno y telefonía básica.",
     invest: "desde $80,000 MXN",
   },
   {
-    label: "Clínica o oficina mediana",
+    label: "Empresa u oficina mediana",
     range: "16 – 40 puntos",
     example:
-      "Varias áreas, cámaras 4K, central telefónica, control de acceso, respaldo de energía.",
+      "Varias áreas o pisos, cámaras 4K, central telefónica, control de acceso, respaldo de energía.",
     invest: "desde $185,000 MXN",
     highlight: true,
   },
   {
-    label: "Corporativo o multi-piso",
+    label: "Corporativo o multi-sucursal",
     range: "40 – 100+ puntos",
     example:
-      "Pisos múltiples, VLANs separadas por área, servidor, redundancia, integración total.",
+      "Pisos múltiples o varias ubicaciones, redes separadas por área, servidor, redundancia, integración total.",
     invest: "desde $350,000 MXN",
   },
 ];
@@ -190,8 +190,8 @@ export default function Offer() {
 
           <p className="mt-5 text-xs sm:text-sm italic text-[#6b6b6b] leading-relaxed">
             Si tu caso no entra en ninguno de estos rangos, también te cotizamos.
-            Hemos hecho proyectos desde un consultorio dental hasta corporativos
-            multi-sucursal.
+            Hemos trabajado con negocios de todos los tamaños y giros — desde
+            despachos profesionales hasta corporativos multi-sucursal.
           </p>
         </div>
 

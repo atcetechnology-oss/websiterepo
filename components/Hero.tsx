@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const chips = [
   "+120 puntos de red instalados desde 2021",
-  "3 clínicas premium funcionando 24/7",
+  "Negocios premium operando 24/7 sobre nuestra red",
   "0 días que un cliente nuestro cerró por nuestra instalación",
   "Garantía de 24 meses por escrito",
 ];

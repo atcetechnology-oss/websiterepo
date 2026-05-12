@@ -1,7 +1,7 @@
 const faqs = [
   {
     q: "¿Cuánto cuesta esto?",
-    a: "Depende del tamaño de tu negocio. Un consultorio chico cuesta desde $80 mil. Una clínica grande llega a $750 mil. Te damos el precio exacto en 48 horas, sin compromiso.",
+    a: "Depende del tamaño y giro de tu negocio. Un local pequeño cuesta desde $80 mil. Una empresa grande o corporativo llega a $750 mil o más. Te damos el precio exacto en 48 horas, sin compromiso.",
   },
   {
     q: "¿Cuánto se tardan?",
@@ -9,7 +9,7 @@ const faqs = [
   },
   {
     q: "¿Tengo que cerrar mi negocio durante la instalación?",
-    a: "No. Trabajamos por bloques y en horarios que tú nos digas. Nuestras 3 clínicas activas no cerraron ni un día durante la obra.",
+    a: "No. Trabajamos por bloques y en horarios que tú nos digas. Los negocios que operan con nuestra red no cerraron ni un día durante la obra.",
   },
   {
     q: "¿Qué pasa si mi negocio crece y necesito más?",

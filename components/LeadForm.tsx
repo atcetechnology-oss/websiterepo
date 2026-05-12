@@ -296,7 +296,7 @@ export default function LeadForm() {
           <label className={labelCls}>Nombre de tu negocio *</label>
           <input
             required
-            placeholder="Ej. Clínica Dental Sonrisa"
+            placeholder="Ej. Constructora del Valle"
             value={state.companyName}
             onChange={(e) => update("companyName", e.target.value)}
             className={inputCls}
@@ -369,7 +369,7 @@ export default function LeadForm() {
           </label>
           <textarea
             rows={3}
-            placeholder="Ej. Estamos abriendo una clínica nueva en Polanco, necesitamos cableado, cámaras y telefonía."
+            placeholder="Ej. Estamos abriendo una oficina nueva y necesitamos toda la red interna, cámaras y telefonía. Somos 12 personas y planeamos crecer."
             value={state.message}
             onChange={(e) => update("message", e.target.value)}
             className={inputCls + " h-auto py-3"}
