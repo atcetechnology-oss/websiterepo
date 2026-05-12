@@ -2,34 +2,43 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="bg-white border-t border-gray-200">
-      <div className="mx-auto max-w-7xl px-5 lg:px-10 py-10 sm:py-14 grid md:grid-cols-3 gap-8 sm:gap-10">
+    <footer className="bg-[#0A203C] text-white">
+      <div className="mx-auto max-w-7xl px-5 lg:px-10 py-12 sm:py-16 grid md:grid-cols-3 gap-10">
         <div>
-          <Image
-            src="/logo.png"
-            alt="ATCE Technology"
-            width={140}
-            height={36}
-            className="h-7 sm:h-9 w-auto"
-          />
-          <p className="mt-3 sm:mt-4 text-xs sm:text-sm text-[#4d4d4d] max-w-xs leading-relaxed">
-            Tecnología que sí sirve, para negocios que no pueden parar.
-            CDMX y todo México.
+          <div className="flex items-center gap-3">
+            <Image
+              src="/logo.png"
+              alt="ATCE Technology"
+              width={200}
+              height={56}
+              className="h-14 sm:h-16 w-auto"
+            />
+            <div className="flex flex-col leading-tight">
+              <span className="text-white font-bold text-lg tracking-tight">
+                ATCE Technology
+              </span>
+              <span className="text-[#00B4D8] text-[10px] uppercase tracking-[0.18em] font-semibold">
+                Tecnología que sí sirve
+              </span>
+            </div>
+          </div>
+          <p className="mt-5 text-sm text-white/70 max-w-xs leading-relaxed">
+            Para negocios que no pueden parar. CDMX y todo México.
           </p>
-          <p className="mt-2 sm:mt-3 text-xs text-[#6b6b6b]">RFC: ATE211110EU2</p>
+          <p className="mt-3 text-xs text-white/50">RFC: ATE211110EU2</p>
         </div>
 
         <div>
-          <p className="text-sm font-semibold uppercase tracking-wider text-[#0B2A4A]">
+          <p className="text-xs sm:text-sm font-semibold uppercase tracking-wider text-[#00B4D8]">
             Contacto
           </p>
-          <ul className="mt-4 space-y-2 text-sm text-[#2B2F36]">
+          <ul className="mt-4 space-y-2 text-sm text-white/85">
             <li>
               <a
                 href="https://wa.me/525511559904"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-[#00B4D8]"
+                className="hover:text-[#00B4D8] transition"
               >
                 WhatsApp / Tel: 55 1155 9904
               </a>
@@ -37,7 +46,7 @@ export default function Footer() {
             <li>
               <a
                 href="mailto:atcetechnology@gmail.com"
-                className="hover:text-[#00B4D8] break-all"
+                className="hover:text-[#00B4D8] transition break-all"
               >
                 atcetechnology@gmail.com
               </a>
@@ -47,7 +56,7 @@ export default function Footer() {
                 href="https://instagram.com/atcetechnology"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-[#00B4D8]"
+                className="hover:text-[#00B4D8] transition"
               >
                 Instagram: @atcetechnology
               </a>
@@ -56,25 +65,25 @@ export default function Footer() {
         </div>
 
         <div>
-          <p className="text-sm font-semibold uppercase tracking-wider text-[#0B2A4A]">
+          <p className="text-xs sm:text-sm font-semibold uppercase tracking-wider text-[#00B4D8]">
             Legal
           </p>
-          <ul className="mt-4 space-y-2 text-sm text-[#2B2F36]">
+          <ul className="mt-4 space-y-2 text-sm text-white/85">
             <li>
-              <a href="/privacidad" className="hover:text-[#00B4D8]">
+              <a href="/privacidad" className="hover:text-[#00B4D8] transition">
                 Política de Privacidad
               </a>
             </li>
             <li>
-              <a href="/terminos" className="hover:text-[#00B4D8]">
+              <a href="/terminos" className="hover:text-[#00B4D8] transition">
                 Términos de Servicio
               </a>
             </li>
           </ul>
         </div>
       </div>
-      <div className="border-t border-gray-100">
-        <div className="mx-auto max-w-7xl px-6 lg:px-10 py-5 text-xs text-[#6b6b6b]">
+      <div className="border-t border-white/10">
+        <div className="mx-auto max-w-7xl px-5 lg:px-10 py-5 text-xs text-white/50">
           © 2026 ATCE Technology. Todos los derechos reservados.
         </div>
       </div>
