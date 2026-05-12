@@ -1,36 +1,46 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ATCE Technology — Sitio web
 
-## Getting Started
+Sitio web de [ATCE Technology](https://atcetechnology.com) construido con Next.js 16 y Tailwind v4.
 
-First, run the development server:
+## Stack
+
+- Next.js 16 (App Router, Turbopack)
+- React 19
+- Tailwind CSS v4
+- TypeScript
+- Despliegue: Vercel
+- Lead capture: webhook a GoHighLevel (GHL)
+
+## Desarrollo local
 
 ```bash
+npm install
+cp .env.example .env.local
+# Editar .env.local y poner la URL del webhook de GHL
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abrir http://localhost:3000
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Estructura
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `app/` — App Router (`layout.tsx`, `page.tsx`, `globals.css`)
+- `components/` — Componentes de la landing
+- `public/clientes/` — Fotografías reales de proyectos ATCE
+- `public/logo.png` — Logo principal
+- `BRIEF.md` — Documento de marca, copy y especificación de UX
 
-## Learn More
+## Variables de entorno
 
-To learn more about Next.js, take a look at the following resources:
+| Variable | Descripción |
+|---|---|
+| `NEXT_PUBLIC_GHL_WEBHOOK_URL` | URL del webhook de GoHighLevel donde se postean los leads del formulario |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Deploy en Vercel
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Conecta este repo a Vercel desde [vercel.com/new](https://vercel.com/new).
+2. Vercel detecta Next.js automáticamente.
+3. En **Environment Variables**, agrega `NEXT_PUBLIC_GHL_WEBHOOK_URL`.
+4. Conecta el dominio `atcetechnology.com`.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Cada push a `main` redeploya producción.
