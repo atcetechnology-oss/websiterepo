@@ -3,20 +3,20 @@ import Image from "next/image";
 export default function Footer() {
   return (
     <footer className="bg-white border-t border-gray-200">
-      <div className="mx-auto max-w-7xl px-6 lg:px-10 py-14 grid md:grid-cols-3 gap-10">
+      <div className="mx-auto max-w-7xl px-5 lg:px-10 py-10 sm:py-14 grid md:grid-cols-3 gap-8 sm:gap-10">
         <div>
           <Image
             src="/logo.png"
             alt="ATCE Technology"
             width={140}
             height={36}
-            className="h-9 w-auto"
+            className="h-7 sm:h-9 w-auto"
           />
-          <p className="mt-4 text-sm text-[#4d4d4d] max-w-xs leading-relaxed">
+          <p className="mt-3 sm:mt-4 text-xs sm:text-sm text-[#4d4d4d] max-w-xs leading-relaxed">
             Tecnología que sí sirve, para negocios que no pueden parar.
             CDMX y todo México.
           </p>
-          <p className="mt-3 text-xs text-[#6b6b6b]">RFC: ATE211110EU2</p>
+          <p className="mt-2 sm:mt-3 text-xs text-[#6b6b6b]">RFC: ATE211110EU2</p>
         </div>
 
         <div>

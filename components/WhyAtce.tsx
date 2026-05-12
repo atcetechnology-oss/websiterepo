@@ -15,25 +15,27 @@ const items = [
 
 export default function WhyAtce() {
   return (
-    <section className="bg-white py-20 lg:py-24">
-      <div className="mx-auto max-w-7xl px-6 lg:px-10">
-        <h2 className="text-3xl lg:text-4xl font-bold text-[#0B2A4A] tracking-tight text-center">
+    <section className="bg-white py-14 sm:py-20 lg:py-24">
+      <div className="mx-auto max-w-7xl px-5 lg:px-10">
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0B2A4A] tracking-tight text-center leading-snug">
           Tres diferencias que cambian todo.
         </h2>
 
-        <div className="mt-14 grid md:grid-cols-3 gap-8">
+        <div className="mt-10 sm:mt-14 grid md:grid-cols-3 gap-5 sm:gap-8">
           {items.map((item, i) => (
             <div
               key={item.title}
-              className="border border-gray-200 p-7 hover:border-[#0B2A4A] transition"
+              className="border border-gray-200 p-6 sm:p-7 hover:border-[#0B2A4A] transition"
             >
-              <div className="text-[#00B4D8] font-mono font-bold text-sm">
+              <div className="text-[#00B4D8] font-mono font-bold text-xs sm:text-sm">
                 0{i + 1}
               </div>
-              <h3 className="mt-3 text-xl font-bold text-[#0B2A4A]">
+              <h3 className="mt-2 sm:mt-3 text-lg sm:text-xl font-bold text-[#0B2A4A]">
                 {item.title}
               </h3>
-              <p className="mt-3 text-[#4d4d4d] leading-relaxed">{item.text}</p>
+              <p className="mt-2 sm:mt-3 text-sm sm:text-base text-[#4d4d4d] leading-relaxed">
+                {item.text}
+              </p>
             </div>
           ))}
         </div>

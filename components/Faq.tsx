@@ -35,24 +35,26 @@ const faqs = [
 
 export default function Faq() {
   return (
-    <section id="faq" className="bg-white py-20 lg:py-28">
-      <div className="mx-auto max-w-3xl px-6">
-        <h2 className="text-3xl lg:text-4xl font-bold text-[#0B2A4A] tracking-tight">
+    <section id="faq" className="bg-white py-14 sm:py-20 lg:py-28">
+      <div className="mx-auto max-w-3xl px-5">
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0B2A4A] tracking-tight leading-snug">
           Lo que la gente nos pregunta.
         </h2>
 
-        <div className="mt-10 divide-y divide-gray-200 border-y border-gray-200">
+        <div className="mt-8 sm:mt-10 divide-y divide-gray-200 border-y border-gray-200">
           {faqs.map((f) => (
-            <details key={f.q} className="group py-5">
-              <summary className="flex items-center justify-between cursor-pointer list-none gap-4">
-                <span className="font-semibold text-[#0B2A4A] text-lg">
+            <details key={f.q} className="group py-4 sm:py-5">
+              <summary className="flex items-start justify-between cursor-pointer list-none gap-3 sm:gap-4">
+                <span className="font-semibold text-[#0B2A4A] text-sm sm:text-base lg:text-lg leading-snug">
                   {f.q}
                 </span>
-                <span className="text-[#00B4D8] text-2xl leading-none transition-transform group-open:rotate-45 select-none">
+                <span className="text-[#00B4D8] text-xl sm:text-2xl leading-none transition-transform group-open:rotate-45 select-none shrink-0">
                   +
                 </span>
               </summary>
-              <p className="mt-4 text-[#4d4d4d] leading-relaxed">{f.a}</p>
+              <p className="mt-3 sm:mt-4 text-sm sm:text-base text-[#4d4d4d] leading-relaxed">
+                {f.a}
+              </p>
             </details>
           ))}
         </div>

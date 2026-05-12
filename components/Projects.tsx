@@ -72,16 +72,16 @@ const gallery = [
 
 export default function Projects() {
   return (
-    <section id="proyectos" className="bg-[#F4F6F8] py-20 lg:py-28">
-      <div className="mx-auto max-w-7xl px-6 lg:px-10">
-        <h2 className="text-3xl lg:text-4xl font-bold text-[#0B2A4A] tracking-tight max-w-3xl">
+    <section id="proyectos" className="bg-[#F4F6F8] py-14 sm:py-20 lg:py-28">
+      <div className="mx-auto max-w-7xl px-5 lg:px-10">
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0B2A4A] tracking-tight max-w-3xl leading-snug">
           No vendemos promesas. Vendemos trabajos que llevan años funcionando.
         </h2>
 
-        <div className="mt-12 grid md:grid-cols-3 gap-8">
+        <div className="mt-8 sm:mt-12 grid md:grid-cols-3 gap-5 sm:gap-8">
           {projects.map((p) => (
             <article key={p.name} className="bg-white">
-              <div className="relative h-56 w-full">
+              <div className="relative h-44 sm:h-56 w-full">
                 <Image
                   src={p.image}
                   alt={p.name}
@@ -90,14 +90,14 @@ export default function Projects() {
                   sizes="(max-width: 768px) 100vw, 33vw"
                 />
               </div>
-              <div className="p-6">
-                <p className="text-xs uppercase tracking-wider text-[#6b6b6b]">
+              <div className="p-5 sm:p-6">
+                <p className="text-[10px] sm:text-xs uppercase tracking-wider text-[#6b6b6b]">
                   {p.year}
                 </p>
-                <h3 className="mt-1 font-bold text-[#0B2A4A] text-lg">
+                <h3 className="mt-1 font-bold text-[#0B2A4A] text-base sm:text-lg leading-snug">
                   {p.name}
                 </h3>
-                <ul className="mt-4 space-y-2 text-sm text-[#4d4d4d]">
+                <ul className="mt-3 sm:mt-4 space-y-2 text-xs sm:text-sm text-[#4d4d4d]">
                   {p.points.map((pt) => (
                     <li key={pt} className="flex gap-2">
                       <span className="text-[#00B4D8]">—</span>
@@ -111,14 +111,14 @@ export default function Projects() {
         </div>
 
         {/* Gallery */}
-        <div className="mt-16">
-          <p className="text-sm uppercase tracking-wider text-[#6b6b6b] font-semibold">
+        <div className="mt-12 sm:mt-16">
+          <p className="text-xs sm:text-sm uppercase tracking-wider text-[#6b6b6b] font-semibold">
             Más evidencia
           </p>
-          <div className="mt-5 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="mt-4 sm:mt-5 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {gallery.map((g) => (
               <figure key={g.src} className="bg-white">
-                <div className="relative h-52 w-full">
+                <div className="relative h-40 sm:h-52 w-full">
                   <Image
                     src={g.src}
                     alt={g.alt}
@@ -127,7 +127,7 @@ export default function Projects() {
                     sizes="(max-width: 1024px) 100vw, 33vw"
                   />
                 </div>
-                <figcaption className="px-4 py-3 text-sm text-[#4d4d4d]">
+                <figcaption className="px-4 py-3 text-xs sm:text-sm text-[#4d4d4d] leading-snug">
                   {g.caption}
                 </figcaption>
               </figure>
@@ -136,13 +136,13 @@ export default function Projects() {
         </div>
 
         {/* Testimonial */}
-        <div className="mt-16 bg-[#0B2A4A] text-white p-10 lg:p-14">
-          <p className="text-3xl lg:text-4xl font-bold leading-snug">
+        <div className="mt-12 sm:mt-16 bg-[#0B2A4A] text-white p-6 sm:p-10 lg:p-14">
+          <p className="text-lg sm:text-2xl lg:text-4xl font-bold leading-snug">
             “Antes teníamos tres proveedores que se peleaban entre ellos. Hoy
             llamamos a un número y todo se resuelve. La red lleva meses sin un
             solo incidente.”
           </p>
-          <p className="mt-6 text-[#00B4D8] font-semibold">
+          <p className="mt-4 sm:mt-6 text-sm sm:text-base text-[#00B4D8] font-semibold">
             — Dr. Carlos Ariza, Director Clínico, Drdiente
           </p>
         </div>

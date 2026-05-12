@@ -10,14 +10,14 @@ const navLinks = [
 export default function Header() {
   return (
     <header className="sticky top-0 z-50 w-full bg-white/90 backdrop-blur border-b border-gray-100">
-      <div className="mx-auto max-w-7xl px-6 lg:px-10 h-16 flex items-center justify-between gap-6">
-        <a href="#top" className="flex items-center gap-2">
+      <div className="mx-auto max-w-7xl px-5 lg:px-10 h-14 sm:h-16 flex items-center justify-between gap-4">
+        <a href="#top" className="flex items-center gap-2 shrink-0">
           <Image
             src="/logo.png"
             alt="ATCE Technology"
             width={140}
             height={36}
-            className="h-9 w-auto"
+            className="h-7 sm:h-9 w-auto"
             priority
           />
         </a>
@@ -45,7 +45,7 @@ export default function Header() {
           </a>
           <a
             href="#cotizacion"
-            className="inline-flex items-center px-4 h-10 text-sm font-semibold text-white bg-[#0B2A4A] hover:bg-[#0A203C] transition"
+            className="inline-flex items-center px-3 sm:px-4 h-9 sm:h-10 text-xs sm:text-sm font-semibold text-white bg-[#0B2A4A] hover:bg-[#0A203C] transition whitespace-nowrap"
           >
             Cotización gratis
           </a>
