@@ -1,47 +1,51 @@
 import Image from "next/image";
 
-const includes = [
+const alwaysIncluded = [
+  "Visita técnica a tu negocio para medir, fotografiar y entender qué necesitas",
+  "Plano profesional con la ubicación exacta de cada punto de red y cámara",
+  "Cableado certificado y probado, etiquetado punto por punto",
+  "Equipos de marca (no clones) listados en tu contrato",
+  "Pruebas con reporte por escrito antes de entregar",
+  "Capacitación de tu equipo para que sepan usar lo que les dejamos",
+];
+
+const sizeRanges = [
   {
-    item: "Diseño completo de tu red (planos, ubicación de cada punto, ruta de cableado)",
-    value: "$35,000",
+    label: "Consultorio o local pequeño",
+    range: "1 – 15 puntos",
+    example:
+      "Recepción, 2-3 consultorios, cámaras en accesos. Internet, telefonía básica.",
+    invest: "desde $80,000 MXN",
   },
   {
-    item: "Cableado profesional certificado (cada punto probado y etiquetado)",
-    value: "$1,200 por punto",
+    label: "Clínica o oficina mediana",
+    range: "16 – 40 puntos",
+    example:
+      "Varias áreas, cámaras 4K, central telefónica, control de acceso, respaldo de energía.",
+    invest: "desde $185,000 MXN",
+    highlight: true,
   },
   {
-    item: "Cámaras 4K conectadas a tu red, con grabación de mínimo 30 días",
-    value: "desde $85,000",
-  },
-  {
-    item: "Control de acceso con huella o tarjeta para entradas y áreas restringidas",
-    value: "desde $45,000",
-  },
-  {
-    item: "Tu propia central telefónica (extensiones, transferencias, contestadora)",
-    value: "desde $28,000",
-  },
-  {
-    item: "Respaldo de energía para que un apagón no te tire la operación",
-    value: "desde $18,000",
+    label: "Corporativo o multi-piso",
+    range: "40 – 100+ puntos",
+    example:
+      "Pisos múltiples, VLANs separadas por área, servidor, redundancia, integración total.",
+    invest: "desde $350,000 MXN",
   },
 ];
 
 const bonuses = [
   {
-    title: "Revisión de seguridad a los 90 días",
-    text: "Vamos personalmente a probar que todo siga funcionando.",
-    value: "$12,000",
-  },
-  {
     title: "Soporte 24/7 los primeros 6 meses",
     text: "WhatsApp directo con un técnico, sin tickets ni espera.",
-    value: "$24,000",
   },
   {
-    title: "Manuales y planos de tu instalación",
+    title: "Revisión post-instalación a los 90 días",
+    text: "Vamos personalmente a probar que todo siga funcionando.",
+  },
+  {
+    title: "Manuales, planos y contrato de garantía",
     text: "Para que cualquier técnico futuro entienda lo que tienes.",
-    value: "$8,000",
   },
 ];
 
@@ -59,107 +63,184 @@ export default function Offer() {
           />
         </div>
 
-        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0B2A4A] tracking-tight leading-snug">
-          Esto es exactamente lo que entregamos en tu proyecto.
+        <p className="text-xs sm:text-sm uppercase tracking-[0.18em] text-[#00B4D8] font-bold">
+          Cómo funcionan los precios
+        </p>
+        <h2 className="mt-3 text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0B2A4A] tracking-tight leading-snug">
+          Cuánto cuesta resolver tu caso depende de tu caso.
+          <br className="hidden sm:block" />
+          <span className="text-[#00B4D8]"> Y eso es justo lo que queremos saber primero.</span>
         </h2>
-        <p className="mt-3 sm:mt-4 text-sm sm:text-base lg:text-lg text-[#4d4d4d] leading-relaxed">
-          Sin paquetes confusos. Sin “extras” después. Lo que ves aquí, es lo
-          que firmas.
+        <p className="mt-4 text-sm sm:text-base lg:text-lg text-[#4d4d4d] leading-relaxed max-w-3xl">
+          No vendemos paquetes prearmados. Cada negocio tiene un tamaño, un
+          flujo y prioridades distintas — pretender que todos pagan lo mismo es
+          de proveedor flojo. Lo que sí podemos prometerte:{" "}
+          <strong className="text-[#0B2A4A]">
+            te damos un precio cerrado por escrito en 48 horas, y ese precio no
+            se mueve durante la obra.
+          </strong>
         </p>
 
-        {/* Includes */}
-        <div className="mt-8 sm:mt-10 bg-white border border-gray-200">
-          <div className="px-4 sm:px-6 py-3 sm:py-4 border-b border-gray-200 flex justify-between text-[10px] sm:text-xs lg:text-sm font-semibold uppercase tracking-wider text-[#4d4d4d]">
-            <span>Lo que recibes</span>
-            <span className="text-right">Lo que cuesta normalmente</span>
-          </div>
-          <ul>
-            {includes.map((row) => (
-              <li
-                key={row.item}
-                className="px-4 sm:px-6 py-4 sm:py-5 border-b border-gray-100 last:border-b-0 flex gap-4 sm:gap-6 justify-between items-start"
-              >
-                <span className="text-sm sm:text-base text-[#2B2F36] flex-1 leading-snug">
-                  {row.item}
-                </span>
-                <span className="text-sm sm:text-base font-semibold text-[#0B2A4A] whitespace-nowrap">
-                  {row.value}
+        {/* What's always included */}
+        <div className="mt-10 sm:mt-12 bg-white border border-gray-200 p-6 sm:p-8">
+          <p className="text-xs sm:text-sm uppercase tracking-wider text-[#6b6b6b] font-semibold">
+            Lo que siempre incluimos — sin importar el tamaño
+          </p>
+          <ul className="mt-5 grid sm:grid-cols-2 gap-3 sm:gap-4">
+            {alwaysIncluded.map((item) => (
+              <li key={item} className="flex gap-3">
+                <svg
+                  className="flex-shrink-0 w-5 h-5 text-[#0E9F6E] mt-0.5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth={3}
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+                <span className="text-sm sm:text-base text-[#2B2F36] leading-snug">
+                  {item}
                 </span>
               </li>
             ))}
           </ul>
         </div>
 
-        {/* Bonuses */}
-        <div className="mt-8 sm:mt-10 bg-[#E8F5EE] border-l-4 border-[#0E9F6E] p-5 sm:p-7">
-          <p className="font-bold text-[#0B2A4A] uppercase tracking-wider text-xs sm:text-sm">
-            Bonos sin costo extra (solo si firmas este mes)
+        {/* Three reference ranges */}
+        <div className="mt-10 sm:mt-12">
+          <p className="text-xs sm:text-sm uppercase tracking-wider text-[#6b6b6b] font-semibold">
+            Tres rangos para que te orientes
           </p>
-          <ul className="mt-4 sm:mt-5 space-y-4">
-            {bonuses.map((b) => (
-              <li
-                key={b.title}
-                className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 sm:gap-2"
+          <p className="mt-2 text-sm sm:text-base text-[#4d4d4d] max-w-2xl">
+            Son referencias reales basadas en proyectos que hemos entregado.
+            Tu precio exacto cambia según tu sitio, equipos y prioridades.
+          </p>
+
+          <div className="mt-6 grid md:grid-cols-3 gap-4 sm:gap-5">
+            {sizeRanges.map((r) => (
+              <div
+                key={r.label}
+                className={
+                  r.highlight
+                    ? "bg-[#0B2A4A] text-white p-6 sm:p-7 relative"
+                    : "bg-white text-[#0B2A4A] p-6 sm:p-7 border border-gray-200"
+                }
               >
+                {r.highlight && (
+                  <span className="absolute -top-3 left-6 bg-[#00B4D8] text-[#0A203C] text-[10px] sm:text-xs uppercase tracking-wider font-bold px-3 py-1">
+                    El más común
+                  </span>
+                )}
+                <p
+                  className={
+                    r.highlight
+                      ? "text-[#00B4D8] text-[10px] sm:text-xs uppercase tracking-wider font-bold"
+                      : "text-[#00B4D8] text-[10px] sm:text-xs uppercase tracking-wider font-bold"
+                  }
+                >
+                  {r.range}
+                </p>
+                <h3
+                  className={
+                    r.highlight
+                      ? "mt-2 text-lg sm:text-xl font-bold text-white leading-snug"
+                      : "mt-2 text-lg sm:text-xl font-bold text-[#0B2A4A] leading-snug"
+                  }
+                >
+                  {r.label}
+                </h3>
+                <p
+                  className={
+                    r.highlight
+                      ? "mt-3 text-sm text-white/80 leading-relaxed"
+                      : "mt-3 text-sm text-[#4d4d4d] leading-relaxed"
+                  }
+                >
+                  {r.example}
+                </p>
+                <div
+                  className={
+                    r.highlight
+                      ? "mt-5 pt-4 border-t border-white/15"
+                      : "mt-5 pt-4 border-t border-gray-100"
+                  }
+                >
+                  <p
+                    className={
+                      r.highlight
+                        ? "text-[10px] sm:text-xs uppercase tracking-wider text-white/60"
+                        : "text-[10px] sm:text-xs uppercase tracking-wider text-[#6b6b6b]"
+                    }
+                  >
+                    Inversión típica
+                  </p>
+                  <p
+                    className={
+                      r.highlight
+                        ? "mt-1 text-xl sm:text-2xl font-bold text-[#00B4D8]"
+                        : "mt-1 text-xl sm:text-2xl font-bold text-[#0B2A4A]"
+                    }
+                  >
+                    {r.invest}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <p className="mt-5 text-xs sm:text-sm italic text-[#6b6b6b] leading-relaxed">
+            Si tu caso no entra en ninguno de estos rangos, también te cotizamos.
+            Hemos hecho proyectos desde un consultorio dental hasta corporativos
+            multi-sucursal.
+          </p>
+        </div>
+
+        {/* Bonuses always */}
+        <div className="mt-10 sm:mt-12 bg-[#E8F5EE] border-l-4 border-[#0E9F6E] p-5 sm:p-7">
+          <p className="font-bold text-[#0B2A4A] uppercase tracking-wider text-xs sm:text-sm">
+            Lo que no cambia, sin importar el tamaño
+          </p>
+          <p className="mt-2 text-sm sm:text-base text-[#2B2F36]">
+            Estos tres bonos van incluidos en cualquier proyecto que firmemos:
+          </p>
+          <ul className="mt-4 sm:mt-5 space-y-3 sm:space-y-4">
+            {bonuses.map((b) => (
+              <li key={b.title} className="flex gap-3">
+                <svg
+                  className="flex-shrink-0 w-5 h-5 text-[#0E9F6E] mt-0.5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth={3}
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
                 <div>
                   <p className="font-semibold text-[#0B2A4A] text-sm sm:text-base">
                     {b.title}
                   </p>
                   <p className="text-[#4d4d4d] text-xs sm:text-sm">{b.text}</p>
                 </div>
-                <p className="font-bold text-[#0E9F6E] text-sm sm:text-base whitespace-nowrap">
-                  Valor: {b.value}
-                </p>
               </li>
             ))}
           </ul>
         </div>
 
-        {/* Savings */}
-        <div className="mt-8 sm:mt-10 bg-white border border-gray-200 p-5 sm:p-7">
-          <p className="text-xs sm:text-sm font-semibold uppercase tracking-wider text-[#4d4d4d]">
-            Cuánto te ahorras en realidad
+        <div className="mt-10 sm:mt-12 text-center">
+          <p className="text-sm sm:text-base text-[#4d4d4d] max-w-2xl mx-auto leading-relaxed">
+            La única forma honesta de saber cuánto te va a costar tu proyecto
+            es que un ingeniero vea tu sitio. Por eso esa visita —{" "}
+            <strong className="text-[#0B2A4A]">y la cotización cerrada en 48 horas</strong>
+            {" "}— son completamente gratis.
           </p>
-          <table className="mt-4 sm:mt-5 w-full text-left">
-            <tbody>
-              <tr className="border-b border-gray-100">
-                <td className="py-3 text-sm sm:text-base text-[#2B2F36] pr-3">
-                  Todo lo anterior al precio normal del mercado
-                </td>
-                <td className="py-3 text-sm sm:text-base font-bold text-[#0B2A4A] text-right whitespace-nowrap">
-                  $303,000
-                </td>
-              </tr>
-              <tr className="border-b border-gray-100">
-                <td className="py-3 text-sm sm:text-base text-[#2B2F36] pr-3">
-                  Tu inversión real con ATCE (proyecto promedio 40 puntos)
-                </td>
-                <td className="py-3 text-sm sm:text-base font-bold text-[#0B2A4A] text-right whitespace-nowrap">
-                  desde $185,000
-                </td>
-              </tr>
-              <tr className="bg-[#0B2A4A] text-white">
-                <td className="py-3 px-3 text-sm sm:text-base font-bold">
-                  Lo que te ahorras
-                </td>
-                <td className="py-3 px-3 text-sm sm:text-base font-bold text-right whitespace-nowrap">
-                  $118,000
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <p className="mt-4 sm:mt-5 text-xs sm:text-sm italic text-[#6b6b6b] leading-relaxed">
-            No es descuento ni promoción. Es lo que cuesta cuando un solo equipo
-            hace todo en vez de cuatro proveedores cobrándote por separado.
-          </p>
-        </div>
-
-        <div className="mt-8 sm:mt-10 text-center">
           <a
             href="#cotizacion"
-            className="inline-flex items-center justify-center h-11 sm:h-12 px-6 sm:px-8 text-sm sm:text-base bg-[#0B2A4A] text-white font-semibold hover:bg-[#0A203C] transition"
+            className="mt-6 inline-flex items-center justify-center h-12 sm:h-14 px-6 sm:px-8 text-sm sm:text-base bg-[#0B2A4A] text-white font-semibold hover:bg-[#0A203C] transition"
           >
-            Quiero mi cotización en 48h
+            Quiero mi precio cerrado
+            <svg className="ml-2 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
           </a>
         </div>
       </div>
