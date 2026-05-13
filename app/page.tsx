@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Solution from "@/components/Solution";
 import Services from "@/components/Services";
+import BrandScroller from "@/components/BrandScroller";
 import Problem from "@/components/Problem";
 import WhyAtce from "@/components/WhyAtce";
 import Offer from "@/components/Offer";
@@ -20,6 +21,7 @@ export default function Home() {
         <Hero />
         <Solution />
         <Services />
+        <BrandScroller />
         <Problem />
         <WhyAtce />
         <Projects />
