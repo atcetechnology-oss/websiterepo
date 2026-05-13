@@ -1,7 +1,7 @@
-import Image from "next/image";
+import HeroCarousel from "./HeroCarousel";
 
 const chips = [
-  "+120 puntos certificados instalados desde 2021",
+  "+600 puntos certificados instalados desde 2021",
   "Negocios premium operando 24/7 sobre nuestra red",
   "0 días de paro por nuestra instalación",
   "12 meses de garantía por escrito",
@@ -21,22 +21,27 @@ export default function Hero() {
         }}
       />
 
-      <div className="relative mx-auto max-w-7xl px-5 lg:px-10 pt-10 pb-10 lg:pt-24 lg:pb-20 grid lg:grid-cols-2 gap-8 lg:gap-10 items-center">
-        <div>
-          <p className="uppercase tracking-[0.12em] text-[10px] sm:text-xs text-[#00B4D8] font-semibold mb-4">
+      <div className="relative mx-auto max-w-7xl px-5 lg:px-10 pt-10 pb-10 lg:pt-20 lg:pb-16 grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+        <div className="lg:col-span-7">
+          <p className="uppercase tracking-[0.14em] text-[10px] sm:text-xs text-[#00B4D8] font-semibold mb-4">
             Para empresas que no pueden darse el lujo de parar
           </p>
-          <h1 className="text-[22px] sm:text-[34px] lg:text-5xl xl:text-6xl leading-[1.15] sm:leading-[1.1] lg:leading-[1.05] font-bold tracking-tight">
+          <h1 className="text-[24px] sm:text-[30px] md:text-[36px] lg:text-[40px] xl:text-5xl leading-[1.15] sm:leading-[1.12] lg:leading-[1.08] font-bold tracking-tight max-w-2xl">
             Tu empresa conectada, vigilada y respaldada contra apagones —{" "}
             <span className="text-[#00B4D8]">
               en 30 días, con un solo contrato y 12 meses de garantía por escrito.
             </span>
           </h1>
-          <p className="mt-5 text-sm sm:text-base lg:text-lg text-white/80 max-w-xl leading-relaxed">
+          <p className="mt-5 lg:mt-6 text-sm sm:text-base lg:text-[17px] text-white/80 max-w-xl leading-relaxed">
             Diseñamos, presupuestamos e instalamos{" "}
-            <strong className="text-white">cableado estructurado, videovigilancia, redes de voz y datos, y sistemas de respaldo de energía</strong>. Un solo equipo se encarga de todo. Tú firmas una vez. Nosotros respondemos por todo.
+            <strong className="text-white">
+              cableado estructurado, videovigilancia, redes de voz y datos, y
+              sistemas de respaldo de energía
+            </strong>
+            . Un solo equipo se encarga de todo. Tú firmas una vez. Nosotros
+            respondemos por todo.
           </p>
-          <div className="mt-6 flex flex-col sm:flex-row gap-3">
+          <div className="mt-6 lg:mt-7 flex flex-col sm:flex-row gap-3">
             <a
               href="#cotizacion"
               className="inline-flex items-center justify-center h-11 sm:h-12 px-5 sm:px-6 text-sm sm:text-base bg-[#00B4D8] text-[#0A203C] font-semibold hover:brightness-110 transition"
@@ -54,15 +59,8 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="relative h-72 sm:h-96 lg:h-[560px] w-full flex items-center justify-center">
-          <Image
-            src="/clientes/rack-instalado-cableado-azul-techo.jpg"
-            alt="Rack profesional instalado por ATCE Technology"
-            fill
-            priority
-            className="object-contain"
-            sizes="(max-width: 1024px) 100vw, 50vw"
-          />
+        <div className="lg:col-span-5">
+          <HeroCarousel />
         </div>
       </div>
 
