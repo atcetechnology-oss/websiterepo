@@ -1,7 +1,7 @@
 const faqs = [
   {
     q: "¿Cuánto cuesta esto?",
-    a: "Depende del tamaño y giro de tu negocio. Un local pequeño cuesta desde $80 mil. Una empresa grande o corporativo llega a $750 mil o más. Te damos el precio exacto en 48 horas, sin compromiso.",
+    a: "Depende del tamaño y giro de tu negocio. Un proyecto pequeño arranca desde $40 mil. Una empresa grande o corporativo llega a $750 mil o más. Te damos el precio exacto en 48 horas, sin compromiso.",
   },
   {
     q: "¿Cuánto se tardan?",

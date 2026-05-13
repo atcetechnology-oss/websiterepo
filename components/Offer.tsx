@@ -12,22 +12,22 @@ const alwaysIncluded = [
 const sizeRanges = [
   {
     label: "Pequeño negocio o local",
-    range: "1 – 15 puntos",
+    range: "Hasta 30 puntos",
     example:
-      "Una sola planta, 3-4 áreas, cámaras en accesos. Internet interno y telefonía básica.",
-    invest: "desde $80,000 MXN",
+      "4 cámaras, 30 puntos de red, 2 access point y un UPS de 2 KVA.",
+    invest: "desde $40,000 MXN",
   },
   {
     label: "Empresa u oficina mediana",
-    range: "16 – 40 puntos",
+    range: "Hasta 100 puntos",
     example:
-      "Varias áreas o pisos, cámaras 4K, central telefónica IP y respaldo de energía para equipos críticos.",
+      "16 a 32 cámaras, 100 puntos de red, 10 access point y un UPS de 5 KVA.",
     invest: "desde $185,000 MXN",
     highlight: true,
   },
   {
     label: "Corporativo o multi-sucursal",
-    range: "40 – 100+ puntos",
+    range: "Más de 100 puntos",
     example:
       "Pisos múltiples o varias ubicaciones, redes separadas por área, servidor, redundancia, integración total.",
     invest: "desde $350,000 MXN",
