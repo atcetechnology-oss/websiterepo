@@ -32,12 +32,12 @@ function BrandItem({ brand }: { brand: Brand }) {
   const scale = brand.scale ?? 100;
   const size = `${scale}%`;
   return (
-    <div className="flex items-center justify-center shrink-0 px-8 sm:px-10 grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition">
+    <div className="flex items-center justify-center shrink-0 px-5 sm:px-7 grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition">
       <span
         aria-label={brand.name}
         role="img"
         title={brand.name}
-        className="block w-20 h-20 sm:w-24 sm:h-24 lg:w-28 lg:h-28 bg-[#0B2A4A]"
+        className="block w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 bg-[#0B2A4A]"
         style={{
           WebkitMaskImage: `url(${brand.svg})`,
           maskImage: `url(${brand.svg})`,
@@ -64,7 +64,7 @@ function MarqueeRow({
 }) {
   return (
     <div
-      className="group flex overflow-hidden py-3 sm:py-4 flex-row max-w-full [mask-image:linear-gradient(to_right,_rgba(0,_0,_0,_0),rgba(0,_0,_0,_1)_8%,rgba(0,_0,_0,_1)_92%,rgba(0,_0,_0,_0))]"
+      className="group flex overflow-hidden py-2 flex-row max-w-full [mask-image:linear-gradient(to_right,_rgba(0,_0,_0,_0),rgba(0,_0,_0,_1)_8%,rgba(0,_0,_0,_1)_92%,rgba(0,_0,_0,_0))]"
       style={{ ["--duration" as string]: duration }}
     >
       {Array(4)
@@ -88,18 +88,13 @@ function MarqueeRow({
 
 export default function BrandScroller() {
   return (
-    <section className="bg-white py-14 sm:py-18 lg:py-24 border-y border-gray-100">
-      <div className="mx-auto max-w-7xl px-5 lg:px-10 mb-8 sm:mb-12 text-center">
-        <p className="text-xs sm:text-sm uppercase tracking-[0.18em] text-[#00B4D8] font-bold">
+    <section className="bg-white py-8 sm:py-10 lg:py-12 border-y border-gray-100">
+      <div className="mx-auto max-w-7xl px-5 lg:px-10 mb-5 sm:mb-6 text-center">
+        <p className="text-[10px] sm:text-xs uppercase tracking-[0.18em] text-[#00B4D8] font-bold">
           Ecosistema de partners
         </p>
-        <h2 className="mt-2 text-xl sm:text-2xl lg:text-3xl font-bold text-[#0B2A4A] tracking-tight leading-snug">
-          Trabajamos con las marcas que tu empresa necesita.
-        </h2>
-        <p className="mt-3 text-sm sm:text-base text-[#4d4d4d] max-w-2xl mx-auto leading-relaxed">
-          Equipos certificados y soportados oficialmente. Nada de clones ni
-          marcas desconocidas — solo lo que las empresas serias usan en
-          producción.
+        <p className="mt-1.5 text-xs sm:text-sm text-[#4d4d4d] max-w-xl mx-auto">
+          Equipos originales de las marcas que usan las empresas serias.
         </p>
       </div>
 
