@@ -1,12 +1,15 @@
 "use client";
 
-type Brand = { name: string; svg: string };
+// scale = porcentaje del bounding box que ocupa el logo (default 100).
+// Isotipos (símbolos sin texto) llenan demasiado el viewBox de simpleicons,
+// por eso los achicamos para que tengan el mismo peso óptico que los wordmarks.
+type Brand = { name: string; svg: string; scale?: number };
 
 // Solo marcas con SVG real disponible — sin texto al lado
 const row1: Brand[] = [
-  { name: "Cisco", svg: "/marcas/cisco.svg" },
+  { name: "Cisco", svg: "/marcas/cisco.svg", scale: 70 }, // bridge/wave isotipo
   { name: "TP-Link", svg: "/marcas/tplink.svg" },
-  { name: "HP", svg: "/marcas/hp.svg" },
+  { name: "HP", svg: "/marcas/hp.svg", scale: 70 }, // round badge
   { name: "Dell", svg: "/marcas/dell.svg" },
   { name: "Lenovo", svg: "/marcas/lenovo.svg" },
   { name: "Toshiba", svg: "/marcas/toshiba.svg" },
@@ -16,23 +19,25 @@ const row1: Brand[] = [
 
 const row2: Brand[] = [
   { name: "Schneider Electric", svg: "/marcas/schneiderelectric.svg" },
-  { name: "Asterisk", svg: "/marcas/asterisk.svg" },
-  { name: "Planet", svg: "/marcas/planet.svg" },
-  { name: "MSI", svg: "/marcas/msi.svg" },
-  { name: "NVIDIA", svg: "/marcas/nvidia.svg" },
+  { name: "Asterisk", svg: "/marcas/asterisk.svg", scale: 55 }, // isotipo
+  { name: "Planet", svg: "/marcas/planet.svg", scale: 60 }, // isotipo p en círculo
+  { name: "MSI", svg: "/marcas/msi.svg", scale: 60 }, // dragón
+  { name: "NVIDIA", svg: "/marcas/nvidia.svg", scale: 65 }, // isotipo ojo
   { name: "Samsung", svg: "/marcas/samsung.svg" },
-  { name: "LG", svg: "/marcas/lg.svg" },
+  { name: "LG", svg: "/marcas/lg.svg", scale: 75 }, // round
   { name: "Yamaha", svg: "/marcas/yamahacorporation.svg" },
 ];
 
 function BrandItem({ brand }: { brand: Brand }) {
+  const scale = brand.scale ?? 100;
+  const size = `${scale}%`;
   return (
     <div className="flex items-center justify-center shrink-0 px-8 sm:px-10 grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition">
       <span
         aria-label={brand.name}
         role="img"
         title={brand.name}
-        className="block w-14 h-14 sm:w-16 sm:h-16 lg:w-20 lg:h-20 bg-[#0B2A4A]"
+        className="block w-20 h-20 sm:w-24 sm:h-24 lg:w-28 lg:h-28 bg-[#0B2A4A]"
         style={{
           WebkitMaskImage: `url(${brand.svg})`,
           maskImage: `url(${brand.svg})`,
@@ -40,8 +45,8 @@ function BrandItem({ brand }: { brand: Brand }) {
           maskRepeat: "no-repeat",
           WebkitMaskPosition: "center",
           maskPosition: "center",
-          WebkitMaskSize: "contain",
-          maskSize: "contain",
+          WebkitMaskSize: size,
+          maskSize: size,
         }}
       />
     </div>
