@@ -10,22 +10,19 @@ const navLinks = [
 export default function Header() {
   return (
     <header className="sticky top-0 z-50 w-full bg-[#0B2A4A] border-b border-white/10 shadow-sm">
-      <div className="mx-auto max-w-7xl px-5 lg:px-10 h-16 sm:h-20 flex items-center justify-between gap-4">
-        <a href="#top" className="flex items-center gap-3 shrink-0 group">
+      <div className="mx-auto max-w-7xl px-5 lg:px-10 h-20 sm:h-24 flex items-center justify-between gap-4">
+        <a href="#top" className="flex items-center gap-3 sm:gap-4 shrink-0 group">
           <Image
             src="/logo.png"
             alt="ATCE Technology"
-            width={200}
-            height={56}
-            className="h-11 sm:h-14 w-auto transition group-hover:scale-105"
+            width={240}
+            height={72}
+            className="h-14 sm:h-18 w-auto transition group-hover:scale-105"
             priority
           />
           <span className="hidden sm:flex flex-col leading-tight">
-            <span className="text-white font-bold text-base tracking-tight">
+            <span className="text-white font-extrabold text-lg lg:text-xl tracking-tight">
               ATCE Technology
-            </span>
-            <span className="text-[#00B4D8] text-[10px] uppercase tracking-[0.18em] font-semibold">
-              Tecnología que sí sirve
             </span>
           </span>
         </a>

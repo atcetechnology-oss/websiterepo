@@ -9,7 +9,7 @@ const items = [
   },
   {
     title: "Garantía de verdad",
-    text: "24 meses. Si un punto de red falla, te lo reponemos en menos de 48 horas. Si no llegamos en 48 horas, ese punto es gratis de por vida.",
+    text: "12 meses sobre trabajo realizado y equipos instalados que suministramos. Si algo falla, lo reemplazamos en menos de 48 horas.",
   },
 ];
 

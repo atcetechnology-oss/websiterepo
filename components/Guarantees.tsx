@@ -11,8 +11,8 @@ const items = [
   },
   {
     n: "03",
-    title: "Que funcione",
-    text: "Si un punto de red certificado falla en los primeros 24 meses, lo reemplazamos en menos de 48 horas. Si no llegamos en 48 horas, ese punto es gratis de por vida.",
+    title: "Trabajo y equipos",
+    text: "12 meses de garantía sobre todo trabajo realizado y los equipos que instalamos y suministramos. Si algo falla, lo reemplazamos en menos de 48 horas.",
   },
 ];
 
@@ -20,8 +20,11 @@ export default function Guarantees() {
   return (
     <section className="bg-[#0B2A4A] text-white py-14 sm:py-20 lg:py-28">
       <div className="mx-auto max-w-7xl px-5 lg:px-10">
-        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-center max-w-3xl mx-auto leading-snug">
-          Esto está firmado en tu contrato. No es marketing. Es legal.
+        <p className="text-xs sm:text-sm uppercase tracking-[0.18em] text-[#00B4D8] font-bold text-center">
+          Nuestras garantías
+        </p>
+        <h2 className="mt-3 text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-center max-w-3xl mx-auto leading-snug">
+          Tres garantías por escrito, firmadas en tu contrato.
         </h2>
 
         <div className="mt-10 sm:mt-14 grid md:grid-cols-3 gap-5 sm:gap-6">

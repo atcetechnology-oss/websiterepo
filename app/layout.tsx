@@ -10,13 +10,15 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://atcetechnology.com"),
-  title: "ATCE Technology — Redes, cámaras y telefonía para negocios en México",
+  title:
+    "ATCE Technology — Cableado estructurado, videovigilancia, redes y respaldo de energía en México",
   description:
-    "Diseñamos e instalamos toda la tecnología de tu negocio bajo un solo contrato. Cotización gratis en 48 horas. Garantía de 24 meses por escrito. CDMX y todo México.",
+    "Diseñamos, presupuestamos e instalamos cableado estructurado, videovigilancia, redes de voz y datos, y sistemas de respaldo de energía. Un solo contrato. Cotización gratis en 48 horas. 12 meses de garantía por escrito. CDMX y todo México.",
   openGraph: {
-    title: "ATCE Technology — Tecnología que sí sirve para tu negocio",
+    title:
+      "ATCE Technology — Infraestructura de telecomunicaciones para empresas",
     description:
-      "Internet, cámaras, accesos y teléfonos bajo un solo contrato. Garantía de 24 meses por escrito.",
+      "Cableado, videovigilancia, redes y respaldo de energía bajo un solo contrato. 12 meses de garantía por escrito.",
     images: ["/clientes/rack-instalado-cableado-azul-techo.jpg"],
     locale: "es_MX",
     type: "website",

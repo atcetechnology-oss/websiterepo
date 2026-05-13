@@ -1,10 +1,10 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import Problem from "@/components/Problem";
 import Solution from "@/components/Solution";
+import Services from "@/components/Services";
+import Problem from "@/components/Problem";
 import WhyAtce from "@/components/WhyAtce";
 import Offer from "@/components/Offer";
-import Process from "@/components/Process";
 import Projects from "@/components/Projects";
 import Guarantees from "@/components/Guarantees";
 import Faq from "@/components/Faq";
@@ -18,12 +18,12 @@ export default function Home() {
       <Header />
       <main className="flex-1">
         <Hero />
-        <Problem />
         <Solution />
+        <Services />
+        <Problem />
         <WhyAtce />
-        <Offer />
-        <Process />
         <Projects />
+        <Offer />
         <Guarantees />
         <Faq />
         <Cta />

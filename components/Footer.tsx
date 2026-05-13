@@ -5,25 +5,24 @@ export default function Footer() {
     <footer className="bg-[#0A203C] text-white">
       <div className="mx-auto max-w-7xl px-5 lg:px-10 py-12 sm:py-16 grid md:grid-cols-3 gap-10">
         <div>
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-4">
             <Image
               src="/logo.png"
               alt="ATCE Technology"
-              width={200}
-              height={56}
-              className="h-14 sm:h-16 w-auto"
+              width={240}
+              height={72}
+              className="h-16 sm:h-20 w-auto"
             />
             <div className="flex flex-col leading-tight">
-              <span className="text-white font-bold text-lg tracking-tight">
+              <span className="text-white font-extrabold text-xl tracking-tight">
                 ATCE Technology
-              </span>
-              <span className="text-[#00B4D8] text-[10px] uppercase tracking-[0.18em] font-semibold">
-                Tecnología que sí sirve
               </span>
             </div>
           </div>
           <p className="mt-5 text-sm text-white/70 max-w-xs leading-relaxed">
-            Para negocios que no pueden parar. CDMX y todo México.
+            Cableado estructurado, videovigilancia, redes de voz y datos, y
+            sistemas de respaldo de energía para empresas que no pueden parar.
+            CDMX y todo México.
           </p>
           <p className="mt-3 text-xs text-white/50">RFC: ATE211110EU2</p>
         </div>

@@ -1,10 +1,10 @@
 import Image from "next/image";
 
 const alwaysIncluded = [
-  "Visita técnica a tu negocio para medir, fotografiar y entender qué necesitas",
-  "Plano profesional con la ubicación exacta de cada punto de red y cámara",
-  "Cableado certificado y probado, etiquetado punto por punto",
-  "Equipos de marca (no clones) listados en tu contrato",
+  "Visita técnica a tu empresa para medir, fotografiar y entender qué necesitas",
+  "Plano profesional con la ubicación exacta de cada punto, cámara y equipo",
+  "Cableado UTP o fibra óptica certificada y probada, etiquetado punto por punto",
+  "Equipos de marca (no clones) listados con número de serie en tu contrato",
   "Pruebas con reporte por escrito antes de entregar",
   "Capacitación de tu equipo para que sepan usar lo que les dejamos",
 ];
@@ -21,7 +21,7 @@ const sizeRanges = [
     label: "Empresa u oficina mediana",
     range: "16 – 40 puntos",
     example:
-      "Varias áreas o pisos, cámaras 4K, central telefónica, control de acceso, respaldo de energía.",
+      "Varias áreas o pisos, cámaras 4K, central telefónica IP y respaldo de energía para equipos críticos.",
     invest: "desde $185,000 MXN",
     highlight: true,
   },
@@ -53,12 +53,12 @@ export default function Offer() {
   return (
     <section id="oferta" className="bg-[#F4F6F8] py-14 sm:py-20 lg:py-28">
       <div className="mx-auto max-w-5xl px-5">
-        <div className="relative h-36 sm:h-48 lg:h-64 w-full mb-8 sm:mb-12">
+        <div className="relative h-72 sm:h-96 w-full mb-8 sm:mb-12 bg-[#0A203C] flex items-center justify-center overflow-hidden">
           <Image
             src="/clientes/rack-patchpanel-cat6-completo.jpg"
             alt="Patch panel certificado"
             fill
-            className="object-cover"
+            className="object-contain p-4"
             sizes="(max-width: 1024px) 100vw, 1024px"
           />
         </div>

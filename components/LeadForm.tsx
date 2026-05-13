@@ -15,11 +15,12 @@ type FormState = {
 };
 
 const SERVICE_OPTIONS = [
-  "Cableado / red interna",
-  "Cámaras de seguridad",
-  "Control de acceso (huellas, tarjetas)",
-  "Telefonía empresarial",
-  "Todo lo anterior (proyecto integral)",
+  "Cableado estructurado (UTP / fibra óptica)",
+  "Redes de voz y datos (cableadas / inalámbricas)",
+  "Videovigilancia (cámaras IP)",
+  "Telefonía IP",
+  "Sistemas de respaldo de energía (UPS)",
+  "Proyecto integral (todo lo anterior)",
   "No estoy seguro, quiero asesoría",
   "Otra cosa",
 ];

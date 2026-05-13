@@ -17,7 +17,7 @@ const faqs = [
   },
   {
     q: "¿Quién me da soporte después de la instalación?",
-    a: "Nosotros. Los primeros 6 meses tienes WhatsApp directo con un técnico, 24/7. Después, sigues con garantía completa por 24 meses.",
+    a: "Nosotros. Los primeros 6 meses tienes WhatsApp directo con un técnico, 24/7. Después, sigues con la garantía completa de 12 meses sobre trabajo realizado y equipos suministrados.",
   },
   {
     q: "¿Trabajan fuera de CDMX?",

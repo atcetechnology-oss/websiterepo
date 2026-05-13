@@ -74,19 +74,22 @@ export default function Projects() {
   return (
     <section id="proyectos" className="bg-[#F4F6F8] py-14 sm:py-20 lg:py-28">
       <div className="mx-auto max-w-7xl px-5 lg:px-10">
-        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0B2A4A] tracking-tight max-w-3xl leading-snug">
-          No vendemos promesas. Vendemos trabajos que llevan años funcionando.
+        <p className="text-xs sm:text-sm uppercase tracking-[0.18em] text-[#00B4D8] font-bold">
+          Proyectos realizados
+        </p>
+        <h2 className="mt-3 text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0B2A4A] tracking-tight max-w-3xl leading-snug">
+          Clientes que llevan años operando sobre nuestra infraestructura.
         </h2>
 
         <div className="mt-8 sm:mt-12 grid md:grid-cols-3 gap-5 sm:gap-8">
           {projects.map((p) => (
             <article key={p.name} className="bg-white">
-              <div className="relative h-44 sm:h-56 w-full">
+              <div className="relative h-72 sm:h-80 w-full bg-[#0A203C] flex items-center justify-center overflow-hidden">
                 <Image
                   src={p.image}
                   alt={p.name}
                   fill
-                  className="object-cover"
+                  className="object-contain p-3"
                   sizes="(max-width: 768px) 100vw, 33vw"
                 />
               </div>
@@ -118,12 +121,12 @@ export default function Projects() {
           <div className="mt-4 sm:mt-5 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {gallery.map((g) => (
               <figure key={g.src} className="bg-white">
-                <div className="relative h-40 sm:h-52 w-full">
+                <div className="relative h-72 sm:h-80 w-full bg-[#0A203C] flex items-center justify-center overflow-hidden">
                   <Image
                     src={g.src}
                     alt={g.alt}
                     fill
-                    className="object-cover"
+                    className="object-contain p-3"
                     sizes="(max-width: 1024px) 100vw, 33vw"
                   />
                 </div>
