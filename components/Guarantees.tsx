@@ -6,8 +6,8 @@ const items = [
   },
   {
     n: "02",
-    title: "Plazo de entrega",
-    text: "Si no entregamos en la fecha firmada, te descontamos 5% del proyecto por cada semana de retraso. Hasta 25% del total.",
+    title: "Documentación y entrega",
+    text: "Recibes diagrama de red, fichas técnicas y manual de uso de cada equipo instalado. No nos vamos del sitio hasta que tú y tu equipo dominen al 100% lo que dejamos operando.",
   },
   {
     n: "03",
