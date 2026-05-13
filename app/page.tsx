@@ -11,6 +11,7 @@ import Guarantees from "@/components/Guarantees";
 import Faq from "@/components/Faq";
 import Cta from "@/components/Cta";
 import Closing from "@/components/Closing";
+import PartnersList from "@/components/PartnersList";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -30,6 +31,7 @@ export default function Home() {
         <Faq />
         <Cta />
         <Closing />
+        <PartnersList />
       </main>
       <Footer />
     </>
