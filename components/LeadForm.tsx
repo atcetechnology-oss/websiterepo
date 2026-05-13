@@ -239,24 +239,45 @@ export default function LeadForm() {
     "w-full px-4 h-12 bg-white text-[#0B2A4A] border border-gray-300 focus:border-[#00B4D8] focus:ring-2 focus:ring-[#00B4D8]/25 outline-none transition placeholder:text-gray-400";
 
   return (
-    <div className="bg-white border border-gray-200 shadow-[0_8px_30px_rgb(0,0,0,0.05)]">
+    <div className="relative bg-white border border-gray-200 shadow-[0_20px_50px_-15px_rgba(11,42,74,0.25)] ring-1 ring-[#00B4D8]/0 hover:ring-[#00B4D8]/20 transition">
+      {/* Top accent bar with shimmer */}
+      <div className="absolute -top-px inset-x-0 h-1 bg-gradient-to-r from-[#00B4D8] via-[#0E9F6E] to-[#00B4D8] overflow-hidden">
+        <div className="absolute inset-y-0 w-1/3 bg-white/30 blur-sm animate-[shimmer_2.4s_linear_infinite]" />
+      </div>
+
       {/* Header strip */}
       <div className="bg-[#0B2A4A] px-5 sm:px-7 py-4 sm:py-5">
         <div className="flex items-center justify-between gap-3">
-          <p className="text-white font-bold text-sm sm:text-base">
-            Tu cotización en 48 horas
+          <p className="text-white font-bold text-base sm:text-lg">
+            Empieza tu cotización
           </p>
-          <span className="text-[10px] sm:text-xs uppercase tracking-wider text-[#00B4D8] font-bold">
+          <span className="text-[10px] sm:text-xs uppercase tracking-wider text-[#00B4D8] font-bold whitespace-nowrap">
             Gratis · 1 minuto
           </span>
         </div>
-        <div className="mt-3 h-1 bg-white/15 overflow-hidden">
-          <div
-            className="h-full bg-[#00B4D8] transition-all duration-300"
-            style={{ width: `${Math.max(progress, 6)}%` }}
-          />
+        <div className="mt-3 flex items-center gap-3">
+          <div className="flex-1 h-1.5 bg-white/15 overflow-hidden">
+            <div
+              className="h-full bg-[#00B4D8] transition-all duration-300"
+              style={{ width: `${Math.max(progress, 6)}%` }}
+            />
+          </div>
+          <span className="text-[10px] sm:text-xs font-mono text-white/70 tabular-nums">
+            {filled}/{totalRequired}
+          </span>
         </div>
       </div>
+
+      <style>{`
+        @keyframes shimmer {
+          0% { transform: translateX(-100%); }
+          100% { transform: translateX(400%); }
+        }
+        @keyframes pulse-glow {
+          0%, 100% { box-shadow: 0 4px 0 0 #0B2A4A, 0 0 0 0 rgba(0,180,216,0.4); }
+          50% { box-shadow: 0 4px 0 0 #0B2A4A, 0 0 0 8px rgba(0,180,216,0); }
+        }
+      `}</style>
 
       <form onSubmit={onSubmit} className="p-5 sm:p-7 grid sm:grid-cols-2 gap-4 sm:gap-5">
         <div className="sm:col-span-2">
@@ -402,9 +423,11 @@ export default function LeadForm() {
           <button
             type="submit"
             disabled={submitting}
-            className="group relative w-full h-14 sm:h-16 bg-[#00B4D8] hover:brightness-110 disabled:opacity-60 text-[#0A203C] font-bold text-base sm:text-lg transition-all duration-200 shadow-[0_4px_0_0_#0B2A4A] hover:shadow-[0_6px_0_0_#0B2A4A] hover:-translate-y-0.5 active:translate-y-0 active:shadow-[0_2px_0_0_#0B2A4A]"
+            style={{ animation: submitting ? "none" : "pulse-glow 2.4s ease-in-out infinite" }}
+            className="group relative w-full h-14 sm:h-[64px] bg-gradient-to-r from-[#00B4D8] via-[#00C4E8] to-[#00B4D8] bg-[length:200%_100%] hover:bg-[length:100%_100%] disabled:opacity-60 text-[#0A203C] font-extrabold text-base sm:text-lg tracking-tight transition-all duration-300 shadow-[0_4px_0_0_#0B2A4A] hover:shadow-[0_6px_0_0_#0B2A4A] hover:-translate-y-0.5 active:translate-y-0 active:shadow-[0_2px_0_0_#0B2A4A] overflow-hidden"
           >
-            <span className="inline-flex items-center justify-center gap-2">
+            <span className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 bg-gradient-to-r from-transparent via-white/40 to-transparent pointer-events-none" />
+            <span className="relative z-10 inline-flex items-center justify-center gap-2">
               {submitting ? (
                 <>
                   <svg

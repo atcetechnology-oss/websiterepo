@@ -5,36 +5,47 @@ export default function Cta() {
     <section id="cotizacion" className="bg-white py-14 sm:py-20 lg:py-28">
       <div className="mx-auto max-w-7xl px-5 lg:px-10 grid lg:grid-cols-5 gap-8 lg:gap-10">
         <div className="lg:col-span-3">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0B2A4A] tracking-tight leading-snug">
-            Recibe tu cotización en 48 horas.
-            <br className="hidden sm:block" />
-            <span className="sm:block"> Gratis. Sin que te vendamos nada que no necesitas.</span>
+          <p className="text-xs sm:text-sm uppercase tracking-[0.18em] text-[#00B4D8] font-bold">
+            Cotización gratis · 48 horas
+          </p>
+          <h2 className="mt-2 text-lg sm:text-xl lg:text-2xl font-bold text-[#0B2A4A] tracking-tight leading-snug">
+            Un ingeniero revisa tu caso y te manda plano, alcance, precio cerrado y fecha de entrega.
           </h2>
-          <div className="mt-5 sm:mt-6 text-sm sm:text-base lg:text-lg text-[#4d4d4d] space-y-3 leading-relaxed">
-            <p>
-              Un ingeniero — no un vendedor — revisa tu caso y te manda:
-            </p>
-            <ul className="space-y-2 ml-1">
-              <li className="flex gap-2">
-                <span className="text-[#00B4D8]">—</span>
-                <span>Plano preliminar de cómo quedaría tu instalación.</span>
+
+          <ul className="mt-5 grid sm:grid-cols-2 gap-x-4 gap-y-2.5">
+            {[
+              "Plano preliminar de tu instalación",
+              "Lista de lo que incluye y lo que no",
+              "Precio cerrado por escrito",
+              "Fecha de entrega que podemos firmar",
+            ].map((item) => (
+              <li key={item} className="flex gap-2 items-start text-sm sm:text-[15px] text-[#2B2F36] leading-snug">
+                <svg
+                  className="flex-shrink-0 w-4 h-4 sm:w-5 sm:h-5 text-[#0E9F6E] mt-0.5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth={3}
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>{item}</span>
               </li>
-              <li className="flex gap-2">
-                <span className="text-[#00B4D8]">—</span>
-                <span>Lista clara de lo que incluye (y lo que no).</span>
-              </li>
-              <li className="flex gap-2">
-                <span className="text-[#00B4D8]">—</span>
-                <span>Precio cerrado por escrito.</span>
-              </li>
-              <li className="flex gap-2">
-                <span className="text-[#00B4D8]">—</span>
-                <span>Fecha de entrega que podemos firmar.</span>
-              </li>
-            </ul>
+            ))}
+          </ul>
+
+          {/* Handoff cue to form */}
+          <div className="mt-7 sm:mt-8 flex items-center gap-3">
+            <div className="flex-shrink-0 inline-flex items-center gap-2 px-3 py-1.5 bg-[#00B4D8] text-[#0A203C] text-[11px] sm:text-xs font-bold uppercase tracking-wider">
+              <svg className="w-3.5 h-3.5 animate-bounce" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 16l-6-6h12z" />
+              </svg>
+              Empieza aquí
+            </div>
+            <div className="flex-1 h-px bg-gradient-to-r from-[#00B4D8] to-transparent" />
           </div>
 
-          <div className="mt-6 sm:mt-8">
+          <div className="mt-4">
             <LeadForm />
           </div>
         </div>
