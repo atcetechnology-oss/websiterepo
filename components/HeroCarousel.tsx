@@ -6,15 +6,16 @@ import { useEffect, useRef, useState } from "react";
 const slides = [
   {
     src: "/clientes/rack-instalado-cableado-azul-techo.jpg",
-    caption: "Rack profesional con cableado certificado en techo",
+    caption: "Rack profesional con cableado UTP categoría 6",
   },
   {
     src: "/clientes/rack-patchpanel-cat6-completo.jpg",
-    caption: "Patch panel UTP Cat6 etiquetado punto por punto",
+    caption:
+      "Rack de telecomunicaciones con patch panel categoría 6, switch y equipo de videovigilancia",
   },
   {
     src: "/clientes/antes-despues-rack-cableado.jpg",
-    caption: "Antes y después del mismo rack",
+    caption: "Proyecto de cableado estructurado: antes y después de la obra",
   },
   {
     src: "/clientes/camaras-hikvision-entrada-consultorio.jpg",
