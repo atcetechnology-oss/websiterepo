@@ -187,9 +187,7 @@ export default function LeadForm() {
     };
 
     if (typeof window !== "undefined") {
-      // @ts-expect-error dataLayer appended by GTM
       window.dataLayer = window.dataLayer || [];
-      // @ts-expect-error
       window.dataLayer.push({
         event: "lead_submit",
         service_interest: payload.serviceInterest,
@@ -211,7 +209,6 @@ export default function LeadForm() {
           payload,
         );
       }
-      // @ts-expect-error
       window.dataLayer?.push({ event: "lead_submit_success" });
       setSubmitted(true);
       // scroll to top of form area for the success card
